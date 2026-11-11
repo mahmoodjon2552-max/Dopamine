@@ -15,7 +15,7 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Build Solution
-      run: msbuild Dopamine.sln /p:Configuration=Release /p:Platform=x86
+      run: msbuild Dopamine.sln /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0
 
     - name: Upload DLL
       uses: actions/upload-artifact@v4
